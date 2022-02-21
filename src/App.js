@@ -1,7 +1,28 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
+*/
+import React, {useState } from 'react' 
 
-function App() {
+const App = () =>{
+  const [counter, setCounter] = useState(0)
+
+  const incrementCounter = () => {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <div>
+      <button onClick={incrementCounter}> increment</button>
+      {counter}
+      <p> hello class</p>
+    </div>
+
+  )
+}
+
+export default App
+
+/*function App() {
   
   return (
     <div className="App">
@@ -25,5 +46,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+*/
